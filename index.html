@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pi Mall</title>
+    <meta property="og:title" content="Pi Network Store">
+    <meta property="og:description" content="This website provides useful information about PI Network.">
+    <meta property="og:image"
+        content="https://ehoadon.online/content/images/resize/5cd445efc30c3529f89cb1bc/63b1db67d53f3916e4d786e2_cach-chuyen-pi-network-sang-tai-khoan-khac.jpeg">
+    <meta property="og:url" content="https://pinetworkstore.io.vn">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="./img/logo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles-box.css">
+</head>
+
+<body id="main-page">
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="./img/logo.png" alt="Banner 1">
+                <div class="title">Pi Network Store</div>
+            </div>
+            <button class="connect-wallet" onclick="redirectWallet()">Kết nối ví</button>
+        </div>
+    </header>
+    <div class="header-center">
+        Ủy quyền chính thức từ pinetwork
+    </div>
+    <div class="converter">
+        <h2>Chuyển đổi PI sang VNĐ</h2>
+        <div class="input-group">
+            <img src="./img/pi_logo.jpg" alt="PI Logo" class="input-logo">
+            <input type="number" id="piAmount" value="" placeholder="Nhập số Pi" oninput="convert()">
+        </div>
+        <div class="input-group">
+            <img src="./img/logo-vnd.jpg" alt="Currency Logo" class="input-logo" id="currencyLogo">
+            <div class="result" id="result">
+                Số tiền được chuyển đổi
+            </div>
+            <select id="currency" onchange="convert(); updateLogo();">
+                <option value="vnd">VNĐ</option>
+                <option value="usd">USD</option>
+            </select>
+        </div>
+        <div class="input-group">
+            <img src="./img/bank.png" alt="PI Logo" class="input-logo">
+            <input type="text" value="" placeholder="Nhập số tài khoản ngân hàng">
+        </div>
+        <div class="input-group">
+            <img src="./img/bank.png" alt="PI Logo" class="input-logo">
+            <input type="text" value="" placeholder="Nhập tên tài khoản">
+        </div>
+        <div class="input-group">
+            <img src="./img/bank.png" alt="Currency Logo" class="input-logo">
+            <select onchange="convert(); updateLogo();">
+                <option value="vnd">Chọn ngân hàng</option>
+                <option value="vietinbank">Vietinbank</option>
+                <option value="agribank">Agribank</option>
+                <option value="vietcombank">Vietcombank</option>
+                <option value="bidv">BIDV</option>
+                <option value="acb">ACB (Ngân hàng Á Châu)</option>
+                <option value="techcombank">Techcombank</option>
+                <option value="mbbank">MB Bank</option>
+                <option value="vpbank">VPBank</option>
+                <option value="hdbank">HDBank</option>
+                <option value="tpbank">TPBank</option>
+                <option value="sacombank">Sacombank</option>
+                <option value="scb">SCB</option>
+                <option value="shb">SHB</option>
+                <option value="ocb">OCB (Ngân hàng Phương Đông)</option>
+                <option value="eximbank">Eximbank</option>
+                <option value="namabank">Nam A Bank</option>
+                <option value="dongabank">DongA Bank</option>
+                <option value="seabank">SeABank</option>
+                <option value="vib">VIB (Ngân hàng Quốc Tế)</option>
+                <option value="bacabank">Bắc Á Bank</option>
+                <option value="abbank">ABBank</option>
+            </select>
+        </div>
+        <button onclick="redirectWallet()">Chuyển đổi</button>
+    </div>
+    <div class="main-header">
+        <p>PINETWORK</p>
+        <p>Mua sắm với PI</p>
+        <p>Mua sắm thoải mái, không lo về giá vì đã có PI.</p>
+    </div>
+    <main>
+        <section class="products">
+            <div class="product-list" id="product-list">
+            </div>
+        </section>
+    </main>
+
+    <!-- <div class="feedback-container">
+
+        <div class="feedback-header-container">
+            <div class="feedback-header">Đánh giá</div><span class="star-icon">4.8★</span></h4>
+        </div>
+        <div class="feedback">
+            <div class="name">
+                <h4>Nguyễn VanAn</h4><span class="star-icon">5★</span></h4>
+            </div>
+            <p>Chuyển đổi Pi sang tiền Việt rất nhanh chóng và tiện lợi.</p>
+        </div>
+        <div class="feedback">
+            <div class="name">
+                <h4>Trần Bích</h4><span class="star-icon">4★</span></h4>
+            </div>
+            <p>Sản phẩm được mua bằng Pi thật tuyệt vời, cảm giác rất mới mẻ!</p>
+        </div>
+        <div class="feedback">
+            <div class="name">
+                <h4>Cường le</h4><span class="star-icon">5★</span></h4>
+            </div>
+            <p>Dịch vụ uy tín, hỗ trợ nhiệt tình. Rất hài lòng!</p>
+        </div>
+
+        <button class="show-more" onclick="showMoreFeedback()">Xem thêm</button>
+    </div> -->
+    <div class="pi-banner" style="background-image: url('img/banner-02.webp');">
+    </div>
+    <footer>
+        <div class="footer-info">
+            <p>Giữ tiền của bạn! Khai thác Pi là miễn phí.</p>
+            <p>Tất cả những gì bạn cần là lời mời từ một thành viên đáng tin cậy hiện có trên mạng.</p>
+            <p>Nếu bạn có lời mời, bạn có thể tải xuống ứng dụng di động:</p>
+            <div class="app-links">
+                <a href="#"><img src="img/apple.webp" alt="App Store"></a>
+                <a href="#"><img src="img/google.webp" alt="Google Play"></a>
+            </div>
+        </div>
+
+        <div class="footer-links">
+            <a href="#">Hỗ trợ & Câu hỏi thường gặp</a>
+            <a href="#">Điều khoản dịch vụ</a>
+        </div>
+    </footer>
+    <script src="main-script.js"></script>
+</body>
+
+</html>
